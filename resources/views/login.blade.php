@@ -18,6 +18,11 @@
         <input type="submit" placeholder="Login">
     </form>
 
+    @isset($result)
+    <span>{{$result}}</span>
+    asdasd
+@endisset
+
     @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
