@@ -22,3 +22,9 @@ Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 
 Route::get('/registration', 'App\Http\Controllers\RegistrationController@index');
 Route::post('/registration', 'App\Http\Controllers\RegistrationController@register');
+
+Route::get('system/sales', 'App\Http\Controllers\SalesController@index');
+
+Route::get('system/sales/physical_store', 'App\Http\Controllers\SalesController@physical_store');
+Route::get('system/sales/social_media', 'App\Http\Controllers\SalesController@social_media');
+Route::get('system/sales/ecommerce', 'App\Http\Controllers\SalesController@ecommerce');

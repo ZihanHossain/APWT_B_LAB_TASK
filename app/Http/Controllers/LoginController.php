@@ -21,14 +21,14 @@ class LoginController extends Controller
 
         //$user = '';
 
-        $user = Admin::where('email', $req->email)
+        $Admin = Admin::where('email', $req->email)
             ->where('password', $req->password)
             ->first();
         
-            if(isset($user)){
-                $req->session()->put('user_name', $user->user_name);
-                $req->session()->put('user_type', $user->user_type);
-                if($user->password != $req->password)
+            if(isset($Admin)){
+                $req->session()->put('user_name', $Admin->user_name);
+                $req->session()->put('user_type', $Admin->user_type);
+                if($Admin->password != $req->password)
                 {
                     return redirect('/login')->with('result', 'email or password is wrong');
                 }
