@@ -19,3 +19,6 @@ Route::post('/login', 'App\Http\Controllers\LoginController@varify');
 Route::get('/logout', 'App\Http\Controllers\LogOutController@index');
 
 Route::get('/admin', 'App\Http\Controllers\AdminController@index');
+
+Route::get('/registration', 'App\Http\Controllers\RegistrationController@index');
+Route::post('/registration', 'App\Http\Controllers\RegistrationController@register');

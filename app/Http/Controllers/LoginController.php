@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller
@@ -21,7 +21,7 @@ class LoginController extends Controller
 
         //$user = '';
 
-        $user = User::where('email', $req->email)
+        $user = Admin::where('email', $req->email)
             ->where('password', $req->password)
             ->first();
         
@@ -34,8 +34,9 @@ class LoginController extends Controller
                 }
                 return redirect('/admin');
             }else{
-                $req->session()->flash('msg', 'invaild username or password');
-                return redirect('/login')->with('result', 'email or password is wrong');
+                echo "asd";
+                // $req->session()->flash('msg', 'invaild username or password');
+                // return redirect('/login')->with('result', 'email or password is wrong');
             }
     }
 }

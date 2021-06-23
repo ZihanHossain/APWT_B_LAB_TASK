@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Customer extends Model
 {
     protected $primaryKey = 'email';
-    public $timestamps = false;
+    
+    const CREATED_AT = 'date_added';
+    const UPDATED_AT = 'last_updated';
 }

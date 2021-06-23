@@ -8,8 +8,8 @@ class AdminController extends Controller
 {
     function index(Request $req)
     {
-        $value = $req->session()->get('user_type');
-        if ($value == 'admin')
+        $value = $req->session()->get('user_name');
+        if (isset($value))
         {
             return view('admin');
         }
