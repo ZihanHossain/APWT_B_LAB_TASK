@@ -27,11 +27,12 @@ class LoginController extends Controller
         
             if(isset($user)){
                 $req->session()->put('user_name', $user->user_name);
-                return redirect('/home');
+                $req->session()->put('user_type', $user->user_type);
                 if($user->password != $req->password)
                 {
                     return redirect('/login')->with('result', 'email or password is wrong');
                 }
+                return redirect('/admin');
             }else{
                 $req->session()->flash('msg', 'invaild username or password');
                 return redirect('/login')->with('result', 'email or password is wrong');

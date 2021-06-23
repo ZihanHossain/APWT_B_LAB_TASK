@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', 'App\Http\Controllers\LoginController@index');
 Route::post('/login', 'App\Http\Controllers\LoginController@varify');
+
+Route::get('/logout', 'App\Http\Controllers\LogOutController@index');
+
+Route::get('/admin', 'App\Http\Controllers\AdminController@index');
