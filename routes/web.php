@@ -28,3 +28,5 @@ Route::get('system/sales', 'App\Http\Controllers\SalesController@index');
 Route::get('system/sales/physical_store', 'App\Http\Controllers\SalesController@physical_store');
 Route::get('system/sales/social_media', 'App\Http\Controllers\SalesController@social_media');
 Route::get('system/sales/ecommerce', 'App\Http\Controllers\SalesController@ecommerce');
+
+Route::post('system/sales/physical_store', 'App\Http\Controllers\SalesController@sell_request');
